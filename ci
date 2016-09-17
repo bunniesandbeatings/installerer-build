@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$#" -ne 0 ]; then
+  COMMIT_MSG=$1
+  shift
+else
+  COMMIT_MSG=$(
+    echo "Updated submodules: "
+    for submodule in $(git diff --cached --submodule | grep '^Submodule' | awk '{print $2}'); do
+      echo "  $(basename $submodule)"
+    done
+  )
+fi
+
+( echo ${COMMIT_MSG} && echo && $(dirname $0)/submodule-log "$@" ) | git ci --file -

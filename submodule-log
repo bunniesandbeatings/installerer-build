@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "** Submodule logs"
+
+if [ "$#" != "0" ]; then
+  for id in "$@"; do
+    echo "[#${id}]"
+  done
+
+  echo
+fi
+
+git submodule status | awk '{print $2}' | xargs git diff --cached --submodule

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+gosub list \
+  -a github.com/bunniesandbeatings/installerer \
+  -t github.com/bunniesandbeatings/installerer/... \
+  -a github.com/bunniesandbeatings/gosub
