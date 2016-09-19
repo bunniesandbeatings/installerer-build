@@ -10,3 +10,11 @@
 	path = src/github.com/bunniesandbeatings/gosub
 	url = git@github.com:bunniesandbeatings/gosub
 	branch = use-existing-submodule-url
+[submodule "src/github.com/spf13/pflag"]
+	path = src/github.com/spf13/pflag
+	url = https://github.com/spf13/pflag
+	branch = master
+[submodule "src/github.com/spf13/cobra"]
+	path = src/github.com/spf13/cobra
+	url = https://github.com/spf13/cobra
+	branch = master
